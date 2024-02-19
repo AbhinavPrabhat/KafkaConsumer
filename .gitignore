@@ -40,9 +40,5 @@ out/
 !**/src/test/**/out/
 /.run/
 
-application/bin/*
-poi-model/bin/*
-poi-service/bin/*
-shipment-write-api-model/bin/*
+ops-dashboard-event-consumer/bin/*
 .vscode/*
-jobs/bin/*
