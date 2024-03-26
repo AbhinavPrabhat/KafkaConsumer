@@ -13,13 +13,23 @@ java {
 
 repositories {
 	mavenCentral()
+	maven {
+		url "https://packages.confluent.io/maven"
+	}
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.kafka:spring-kafka:2.7.7'
+	implementation 'org.springframework.kafka:spring-kafka'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'io.confluent', name: 'kafka-avro-serializer', version: '7.5.3'
+	implementation group: 'org.apache.avro', name: 'avro', version: '1.11.3'
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+
+
+
+	
 }
 
 tasks.named('test') {

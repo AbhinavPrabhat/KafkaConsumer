@@ -1,2 +1,17 @@
 server:
   port: ${PORT:8200}
+
+
+spring:
+  kafka:
+    topic: qa1.companyid_10417.events
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: generic
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      schema-registry-url: http://localhost:8081
+
+
+
+
